@@ -1,4 +1,4 @@
-package com.fmh.model;
+package com.fmh.pojo;
 
 public class User {
 	private int id;
