@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fmh.dao.UserMapper">
+    <insert id="add" parameterType="com.fmh.pojo.User" useGeneratedKeys="true" keyProperty="id">
+        insert into author (name,age) values (#{name},#{age})
+    </insert>
+    <select id="find" resultMap="java.util.HashMap">
+        select * from author where id = #{id}
+    </select>
+</mapper>
