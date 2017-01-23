@@ -1,7 +1,6 @@
 package com.fmh.mybatis;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.pool.DruidPooledConnection;
 import com.fmh.pojo.User;
 import com.fmh.service.UserService;
 import org.junit.Test;
@@ -28,7 +27,7 @@ public class TestMyBatis {
 	@Test
 	public void test1(){
 		User user = userService.find(1);
-		System.out.println(user);
+		System.out.println(user.getName());
 	}
 
 	@Test
@@ -47,5 +46,13 @@ public class TestMyBatis {
 		if (!con.isClosed()){
 			System.out.println(1);
 		}
+	}
+
+	@Test
+	public void test3(){
+		User user = new User();
+		user.setAge(10);
+		user.setName("wf");
+		userService.add(user);
 	}
 }
