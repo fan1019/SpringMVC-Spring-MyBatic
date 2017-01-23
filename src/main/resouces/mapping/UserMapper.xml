@@ -4,7 +4,7 @@
     <insert id="add" parameterType="com.fmh.pojo.User" useGeneratedKeys="true" keyProperty="id">
         insert into author (name,age) values (#{name},#{age})
     </insert>
-    <select id="find" resultMap="java.util.HashMap">
-        select * from author where id = #{id}
+    <select id="find" resultType="com.fmh.pojo.User">
+        select id,name,age from author where id = #{id}
     </select>
 </mapper>

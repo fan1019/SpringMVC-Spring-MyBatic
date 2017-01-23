@@ -15,7 +15,7 @@
                            http://www.springframework.org/schema/tx
                            http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-    <context:component-scan base-package="com"/>
+    <context:component-scan base-package="com.fmh"/>
 
     <bean id="propertyConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="jdbc.properties"/>
@@ -34,7 +34,7 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath:com/fmh/mapping/*.xml"/>
+        <property name="mapperLocations" value="classpath:mapping/*.xml"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
