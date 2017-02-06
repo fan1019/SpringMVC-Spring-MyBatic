@@ -18,7 +18,7 @@
     <context:component-scan base-package="com.fmh"/>
 
     <bean id="propertyConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="jdbc.properties"/>
+        <property name="location" value="classpath:jdbc.properties"/>
     </bean>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
