@@ -7,4 +7,8 @@
     <select id="find" resultType="com.fmh.pojo.User">
         select id,name,age from author where id = #{id}
     </select>
+
+    <select id="getAllUser" resultType="com.fmh.pojo.User">
+        select id,name,age from author;
+    </select>
 </mapper>
