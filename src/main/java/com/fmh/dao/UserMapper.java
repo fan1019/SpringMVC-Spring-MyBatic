@@ -10,4 +10,6 @@ public interface UserMapper {
 	public User find(int id);
 
 	public List<User> getAllUser();
+
+	public void delete(int id);
 }

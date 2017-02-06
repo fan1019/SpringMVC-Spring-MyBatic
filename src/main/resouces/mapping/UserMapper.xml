@@ -11,4 +11,8 @@
     <select id="getAllUser" resultType="com.fmh.pojo.User">
         select id,name,age from author;
     </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from author where id = #{id}
+    </delete>
 </mapper>

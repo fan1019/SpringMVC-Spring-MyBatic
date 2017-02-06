@@ -2,7 +2,6 @@ package com.fmh.controller;
 
 import com.fmh.pojo.User;
 import com.fmh.service.UserService;
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,6 +37,12 @@ public class UserController {
 		List<User> list = userService.getAllUser();
 		model.addAttribute("userList", list);
 		return "listUser";
+	}
+
+	@RequestMapping(value = "/delete", method = {RequestMethod.GET, RequestMethod.POST})
+	public String delete(int id){
+		userService.delete(id);
+		return "redirect:list";
 	}
 
 }

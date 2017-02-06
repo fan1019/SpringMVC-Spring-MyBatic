@@ -6,6 +6,7 @@
 </head>
 <body>
     <a href="/jsp/addUser.jsp">addUser</a>
+    <a href="/jsp/delete.jsp">deleteUser</a>
     <table border="1">
         <tr>
             <td>id</td>
