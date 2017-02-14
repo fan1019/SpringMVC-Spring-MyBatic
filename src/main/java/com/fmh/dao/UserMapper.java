@@ -5,11 +5,11 @@ import com.fmh.pojo.User;
 import java.util.List;
 
 public interface UserMapper {
-	public void add(User user);
+	void add(User user);
 
-	public User find(int id);
+	User find(int id);
 
-	public List<User> getAllUser();
+	List<User> getAllUser();
 
-	public void delete(int id);
+	void delete(int id);
 }

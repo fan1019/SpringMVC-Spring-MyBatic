@@ -15,8 +15,12 @@ import java.util.List;
 @RequestMapping(value = "/user")
 public class UserController {
 
+	private final UserService userService;
+
 	@Autowired
-	private UserService userService;
+	public UserController(UserService userService) {
+		this.userService = userService;
+	}
 
 	@RequestMapping(value = "/add", method = {RequestMethod.GET, RequestMethod.POST})
 	public String add(User user) {
