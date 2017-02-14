@@ -31,6 +31,14 @@ public class User {
 
 	@Override
 	public String toString() {
-		return super.toString();
+		StringBuilder sb = new StringBuilder();
+		sb.append(getClass().getSimpleName());
+		sb.append(" [");
+		sb.append("Hash = ").append(hashCode());
+		sb.append(", id=").append(id);
+		sb.append(", name=").append(name);
+		sb.append(", age=").append(age);
+		sb.append("]");
+		return sb.toString();
 	}
 }
